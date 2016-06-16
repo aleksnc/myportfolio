@@ -1,0 +1,92 @@
+@text-size-xxl:                       36px;
+@text-size-xl:                        30px;
+@text-size-l:                         18px;
+@text-size:                           16px;
+@text-size-sm:                        14px;
+
+@color-primary:                       rgb(45,106,161);
+@color-primary-active:                rgb(27,67,114);
+@color-second:                        #ff7435;
+@color-second-active:                 #e85715;
+
+
+@gray-dark:                           #191919;
+@gray-shadow:                         #4c4c4c;
+@gray:                                #838383;
+@gray-light:                          #ebebeb;
+@gray-wight:                          #fafafa;
+
+@font-family:                        'fira sans', sans-serif;
+@font-family-h:                      'PT Serif Caption', sans-serif;
+
+@screen-sm:                           768px;
+@screen-md:                           1200px;
+
+@img-path:                            '../img/';
+
+
+.line-l1, .line-l2{
+  border-bottom:                      2px solid @color-second;
+  width:                              30px;
+  display:                            block;
+  margin:                             2px auto;
+}
+
+.title{
+  font-family:                        @font-family-h;
+  font-weight:                        500;
+  font-size:                          (@text-size-xl)-4;
+  margin:                             0;
+  display:                            block;
+  margin:                             0;
+  padding:                            0;
+  text-align:                         center;
+
+  @media (min-width: 468px) {
+    font-size:                        @text-size-xl;
+  }
+}
+
+.color-attention{
+  color:                              @color-second;
+  font-size:                          @text-size-l;
+
+  &:hover{
+    color:                            @color-second-active;
+  }
+}
+
+
+.span--wrapper{
+  padding: 0 5px;
+}
+
+.oneLine{
+  &:after{
+    content:                          "";
+    display:                          block;
+    width:                            30px;
+    border-bottom:                    2px solid @color-second;
+    margin:                           0 auto;
+    opacity:                          0;
+  }
+  &:hover:after{
+    opacity:                          1;
+  }
+}
+
+.twoLine{
+  &:after{
+    content:                          "";
+    display:                          block;
+    width:                            30px;
+    padding-top:                      2px;
+    border-top:                       2px solid @color-second;
+    border-bottom:                    2px solid @color-second;
+    margin:                           0 auto;
+    opacity:                          0;
+  }
+  &:hover:after{
+    opacity:                          1;
+  }
+}

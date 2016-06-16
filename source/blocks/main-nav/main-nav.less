@@ -1,0 +1,45 @@
+.main-nav{
+  display:flex;
+  align-content: left;
+  align-items: left;
+  flex-direction: column;
+  justify-content: left;
+  height: 59px;
+  margin: 0 20px;
+
+  &__list{
+    align-self: center;
+    color:                        @gray-dark;
+    font-size:                    @text-size-sm;
+    text-transform:               uppercase;
+    font-weight:                  400;
+    display:                      none;
+    
+    @media (min-width: 1200px) {
+      display:                    block;
+
+    }
+  }
+
+  &__link{
+    float:                        left;
+    margin:                       5px;
+
+    &:hover{
+      color:                    @color-second;
+    }
+  }
+
+  &__burger{
+    display: block;
+    width: 25px;
+    height: 25px;
+    background:               url('@{img-path}icon-burger.png') no-repeat;
+    align-self: center;
+    cursor: pointer;
+    @media (min-width: 1200px) {
+      display: none;
+
+    }
+  }
+}
