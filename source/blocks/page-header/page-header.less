@@ -1,8 +1,56 @@
 .page-header{
+  display:                             flex;
+  position:                            relative;
+  flex-direction:                      column;
   max-width:                           1200px;
+  height:                              100%;
   margin:                              0 auto;
+  color:                               #fff;
+  text-align:                          center;
+  font-family:                         "Open Sans Light", "Helvetica Neue", Helvetica, Arial,sans-serif;
+  padding: 50px 20px;
+
   &__inner{
-    max-height:                        356px;
+    display:                           block;
+    position:                          relative;
+    background-image:                  url("@{img-path}16.jpg");
+    background-size:                   cover;
     width:                             100%;
+    
+    @media (min-width: 1200px ) {
+      background-position: 50% -310px;
+      background-attachment:             fixed;
+    }
+
+    &:before{
+      content:                         "";
+      display:                         block;
+      background-color:                rgba(35,16,16,0.65);
+      height:                          100%;
+      width:                           100%;
+      position:                        absolute;
+    }
+  }
+
+  &__title{
+    color:                             #fff;
+    font-size:                         @text-size-xxl;
+    text-transform:                    uppercase;
+
+    &:after{
+      content:                         "";
+      display:                         block;
+      margin:                          20px auto 0;
+      width:                           12%;
+      border-top-style:                solid;
+      border-top-width:                3px;
+      border-top-color:                #fff;
+    }
+  }
+
+  &__description{
+    font-size:                         @text-size;
+    font-weight:                       400;
+    margin:                            0 0 20px;
   }
 }

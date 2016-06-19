@@ -1,24 +1,18 @@
 .main-nav{
-  display:flex;
-  align-content: left;
-  align-items: left;
-  flex-direction: column;
-  justify-content: left;
-  height: 59px;
-  margin: 0 20px;
+  display:                        flex;
+  align-content:                  center;
+  align-items:                    center;
+  justify-content:                center;
+  height:                         59px;
+  margin:                         0;
 
   &__list{
     align-self: center;
-    color:                        @gray-dark;
+    color:                        #fff;
     font-size:                    @text-size-sm;
     text-transform:               uppercase;
-    font-weight:                  400;
-    display:                      none;
-    
-    @media (min-width: 1200px) {
-      display:                    block;
-
-    }
+    font-weight:                  500;
+    display:                      flex;
   }
 
   &__link{
@@ -26,20 +20,7 @@
     margin:                       5px;
 
     &:hover{
-      color:                    @color-second;
-    }
-  }
-
-  &__burger{
-    display: block;
-    width: 25px;
-    height: 25px;
-    background:               url('@{img-path}icon-burger.png') no-repeat;
-    align-self: center;
-    cursor: pointer;
-    @media (min-width: 1200px) {
-      display: none;
-
+      color:                      @color-second;
     }
   }
 }

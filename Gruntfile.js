@@ -97,7 +97,7 @@ module.exports = function(grunt){
         tasks: ['copy:css','cmq'],
       },
       jade: {
-        files: ['source/*.jade'],
+        files: ['source/**/*.jade'],
         tasks: ['jade'],
       },
       less: {
