@@ -40,7 +40,8 @@
 }
 
 .title,
-.about-me__title {
+.about-me__title,
+.my-tools__title {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 500;
 	font-size: 26px;
@@ -207,6 +208,77 @@ label span {
 	background-image: url("../img/57--black.png");
 }
 
+.my-tools {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	position: relative;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	max-width: 1200px;
+	height: 100%;
+	margin: 0 auto;
+	color: #fff;
+	text-align: center;
+	font-family: "Open Sans Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	padding: 20px;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+.my-tools__inner {
+	display: block;
+	position: relative;
+	background-image: url("../img/1.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.my-tools__inner:before {
+	content: "";
+	display: block;
+	background-color: rgba(45, 106, 161, 0.84);
+	height: 100%;
+	width: 100%;
+	position: absolute;
+}
+
+.my-tools__title {
+	text-align: center;
+	color: #fff;
+	width: 100%;
+}
+
+.my-tools__tool {
+	background-image: url("../img/44--white.png");
+	background-repeat: no-repeat;
+	background-size: auto 50px;
+	width: 45%;
+	padding-left: 60px;
+	padding-top: 5px;
+	text-align: left;
+	margin: 10px 0;
+	min-height: 50px;
+}
+
+.my-tools__tool--cms {
+	background-image: url("../img/93--white.png");
+}
+
+.my-tools__tool--sience {
+	background-image: url("../img/96--white.png");
+}
+
+.my-tools__tool--notepad {
+	background-image: url("../img/64--white.png");
+}
+
 .nav-display {
 	display: block;
 	width: 100%;
@@ -331,7 +403,8 @@ label span {
 @media (min-width: 468px) {
 
 .title,
-.about-me__title {
+.about-me__title,
+.my-tools__title {
 	font-size: 30px;
 }
 
@@ -354,6 +427,10 @@ label span {
 .my-quality__block {
 	width: 24%;
 	max-width: 270px;
+}
+
+.my-tools__tool {
+	width: 24%;
 }
 
 }

@@ -1,0 +1,70 @@
+.my-tools{
+  display:                             flex;
+  position:                            relative;
+  flex-wrap:                           wrap;
+  max-width:                           1200px;
+  height:                              100%;
+  margin:                              0 auto;
+  color:                               #fff;
+  text-align:                          center;
+  font-family:                         "Open Sans Light", "Helvetica Neue", Helvetica, Arial,sans-serif;
+  padding:                             20px;
+  justify-content:                     space-between;
+
+  &__inner{
+    display:                           block;
+    position:                          relative;
+    background-image:                  url("@{img-path}1.jpg");
+    background-attachment:             fixed;
+    background-size:                   cover;
+    background-position:               center center;
+    background-repeat:                 no-repeat;
+
+
+    &:before{
+       content:                         "";
+       display:                         block;
+       background-color:                rgba(45, 106, 161, 0.84);
+       height:                          100%;
+       width:                           100%;
+       position:                        absolute;
+    }
+  }
+
+  &__title{
+    &:extend(.title);
+    text-align:                         center;
+    color:                              #fff;
+    width:                              100%;
+  }
+
+  &__tool{
+    background-image:                  url("@{img-path}44--white.png");
+    background-repeat:                 no-repeat;
+    background-size:                   auto 50px;
+    width:                             45%;
+    padding-left:                      60px;
+    padding-top:                       5px;
+    text-align:                        left;
+    margin:                            10px 0;
+    min-height:                        50px;
+
+    &--cms{
+      background-image:                  url("@{img-path}93--white.png");
+    }
+
+    &--sience{
+      background-image:                  url("@{img-path}96--white.png");
+    }
+
+    &--notepad{
+      background-image:                  url("@{img-path}64--white.png");
+    }
+
+    @media (min-width: 768px){
+      width:                             24%;
+    }
+  }
+
+
+}
