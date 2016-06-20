@@ -1,0 +1,90 @@
+.my-contacts{
+  display:                             flex;
+  position:                            relative;
+  flex-wrap:                           wrap;
+  max-width:                           1200px;
+  margin:                              0 auto;
+  color:                               #fff;
+  text-align:                          center;
+  font-family:                         "Open Sans Light", "Helvetica Neue", Helvetica, Arial,sans-serif;
+  padding:                             20px;
+  justify-content:                     space-between;
+  padding: 0 20px;
+
+  &__inner{
+    display:                           block;
+    position:                          relative;
+    background-image:                  url("@{img-path}24.jpg");
+    background-attachment:             fixed;
+    background-size:                   cover;
+    background-position:               center center;
+    background-repeat:                 no-repeat;
+    padding-bottom:                    20px;
+
+    &:before{
+      content:                         "";
+      display:                         block;
+      background-color:                rgba(45, 106, 161, 0.5);
+      height:                          100%;
+      width:                           100%;
+      position:                        absolute;
+    }
+  }
+
+
+  &__title{
+    &:extend(.title);
+    text-align:                         center;
+    color:                              #fff;
+    width:                              100%;
+    margin:                             20px 0;
+  }
+
+  &__contact-post{
+    display:                           block;
+    width:                             100%;
+
+    @media (min-width:768px) {
+      display:                           flex;
+      width:                             100%;
+      justify-content:                   space-between;
+      align-items:                       center;
+    }
+  }
+
+  &__contact{
+    width:                             100%;
+    background-color:                  rgba(255, 255, 255, 0.75);
+    padding:                           35px 40px;
+    max-width:                         670px;
+
+    @media (min-width:768px) {
+      text-align:                      left;
+      width:                           100%;
+      flex-shrink:                     2;
+    }
+  }
+
+  &__type{
+    font-size:                         (@text-size-xl)-6;
+    color:                             #000;
+
+    &--line{
+      width:                           100%;
+      border-bottom:                   3px solid;
+      padding-bottom:                  10px;
+      margin-bottom:                   10px;
+      border-color:                    @color-primary;
+    }
+  }
+
+  &__post {
+    width:                             100%;
+    @media (min-width: 768px) {
+      max-width:                       350px;
+      margin-left:                     20px;
+      flex-shrink:                     3;
+    }
+  }
+
+}

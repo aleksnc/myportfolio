@@ -49,12 +49,37 @@
       </div>
     </div>
     <div class="my-gallery">
-      <div class="my-gallery__title">Мои работы</div>
+      <div class="my-gallery__title">Мои проекты</div>
       <div class="my-gallery__projects">
+        <div style="background-image: url('img/mbt.jpg');" class="my-gallery__project"><a href="#" class="my-gallery__project-preview">+</a><a href="#" class="my-gallery__project-preview my-gallery__project-preview--about"></a></div>
+        <div style="background-image: url('img/sale.jpg');" class="my-gallery__project"><a href="#" class="my-gallery__project-preview">+</a><a href="#" class="my-gallery__project-preview my-gallery__project-preview--about"></a></div>
+        <div style="background-image: url('img/kiber.jpg');" class="my-gallery__project"><a href="#" class="my-gallery__project-preview">+</a><a href="#" class="my-gallery__project-preview my-gallery__project-preview--about"></a></div>
         <div style="background-image: url('img/mbt.jpg');" class="my-gallery__project"><a href="#" class="my-gallery__project-preview">+</a><a href="#" class="my-gallery__project-preview my-gallery__project-preview--about"></a></div>
         <div style="background-image: url('img/sale.jpg');" class="my-gallery__project"><a href="#" class="my-gallery__project-preview">+</a><a href="#" class="my-gallery__project-preview my-gallery__project-preview--about"></a></div>
         <div style="background-image: url('img/kiber.jpg');" class="my-gallery__project"><a href="#" class="my-gallery__project-preview">+</a><a href="#" class="my-gallery__project-preview my-gallery__project-preview--about"></a></div>
       </div>
     </div>
+    <div class="my-contacts__inner">
+      <section class="my-contacts"><span class="my-contacts__title">Контакты</span>
+        <div class="my-contacts__contact-post">
+          <div class="my-contacts__contact">
+            <div class="my-contacts__type my-contacts__type--line"><span class="my-contacts__type-name">ТЕЛЕФОН:</span><a href="tel:+79043390832" class="my-contacts__type-info"> +7(904) 33 908 32</a></div>
+            <div class="my-contacts__type"><span class="my-contacts__type-name">E-MAIL:<a href="mailto:aleksnc@mail.ru" class="my-contacts__type-info"> aleksnc@mail.ru</a></span></div>
+          </div>
+          <div class="my-contacts__post">
+            <form class="form"><span class="form__title">Пишите!</span><span class="form__name">Почта</span>
+              <input id="mail" type="text" onkeyup="valid_focus(event)" placeholder="ввведите@адрес.почты" class="form__input"><span class="form__name">Тема сообщения</span>
+              <input id="theme" type="text" onkeyup="valid_focus(event)" placeholder="Тема сообщения" class="form__input"><span class="form__name">Текс сообщения</span>
+              <textarea id="message" onkeyup="valid_focus(event)" placeholder="Ваше сообщение" class="form__input"></textarea><a id="send" type="text" href=" " class="form__send">Отправить</a>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script src="js/fancy/jquery.fancybox.pack.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/autoresize.jquery.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
