@@ -1,18 +1,93 @@
 .about-me{
-    padding:                           0 20px;
-    max-width:                         1200px;
-    margin:                            0 auto;
+  display:                           flex;
+  padding:                           20px;
+  max-width:                         1200px;
+  margin:                            0 auto;
+  justify-content:                   space-between;
+  flex-wrap:                         wrap;
+
+  @media (min-width: 768px){
+    align-items: center;
+    padding:                       20px;
+    flex-wrap:                     nowrap;
+  }
+
+  &__img{
+    width:                         100%;
+    height:                        100%;
+    max-width:                     400px;
+    margin:                        0 auto;
 
     @media (min-width: 768px){
-        padding:                      0;
+      width:                     50%;
     }
-    &__title{
-        &:extend(.title);
-        text-align:                    center;
-        margin:                        20px 0;
+  }
+
+
+  &__info{
+    max-width:                     600px;
+
+    @media (min-width: 768px){
+      padding:                       20px;
+    }
+  }
+
+  &__title{
+    &:extend(.title);
+    text-align:                    center;
+    margin:                        20px 0;
+
+    @media (min-width: 768px){
+      margin:                    0;
+      margin-bottom:             20px
+    }
+  }
+
+  &__description{
+    text-align:                    justify;
+  }
+
+  &__punct{
+    margin:                        15px 0;
+    display:                       flex;
+    flex-direction:                column;
+  }
+
+  &__punct-part {
+    margin:                        10px 0;
+    padding-left:                  45px;
+    background-repeat:             no-repeat;
+    background-size:               35px auto;
+    background-position-y:         top;
+
+    @media (min-width: 768px){
+      background-position-y:         center
     }
 
-    &__description{
-        text-align:                    justify;
+
+    &--ok{
+      background-image:              url("@{img-path}210--navy.png");
     }
+    &--epic{
+      background-image:              url("@{img-path}95--black.png");
+    }
+
+    &--gut{
+      background-image:              url("@{img-path}47--black.png");
+    }
+
+    &--interes{
+      background-image:              url("@{img-path}270--black.png");
+    }
+    &--job{
+      background-image:              url("@{img-path}255--black.png");
+    }
+
+  }
+
+  &__punct-title{
+    margin:                        5px 0;
+    display:                       block;
+    font-weight:                   550px;
+  }
 }

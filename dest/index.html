@@ -11,71 +11,70 @@
       <div class="page-header">
         <nav class="main-nav">
           <ul class="main-nav__list">
-            <li class="main-nav__link"><a href="roomlist.html">Обо мне</a></li>
-            <li class="main-nav__link"><a href="single-room.html">Мои проекты</a></li>
-            <li class="main-nav__link"><a href="#">Контакты</a></li>
+            <li class="main-nav__link"><a class="main-nav__punct" href="#about">Обо мне</a></li>
+            <li class="main-nav__link"><a class="main-nav__punct" href="#project">Мои проекты</a></li>
+            <li class="main-nav__link"><a class="main-nav__punct" href="#contact">Контакты</a></li>
           </ul>
         </nav>
         <h1 class="page-header__title">HTML-ВЕРСТКА</h1>
         <h2 class="page-header__description">Привет! Меня зовут Александр Абрамов, а это мое портфолио.</h2>
       </div>
     </div>
-    <section class="about-me">
-      <h1 class="about-me__title">Обо мне</h1>
-      <p class="about-me__description">
-        Александр Абрамов , 26 лет. В 2012-м году закончил СПбГУТ
-        "им. проф. Бонч-Бруевича" Факультет Информационных
-         Систем и Технологий. Занимаюсь версткой с 2011 года.
-         Стараюсь постоянно учится и совершенстровать свои навыки.
-         
-         
-      </p>
-    </section>
-    <div class="my-quality__inner">
-      <div class="my-quality">
-        <div class="my-quality__block"><span class="my-quality__block-title">Гарантия качества</span><span class="my-quality__block-description">Постоянно учусь и совершенствую свои знания</span></div>
-        <div class="my-quality__block my-quality__block--message"><span class="my-quality__block-title message">Всегда на связи</span><span class="my-quality__block-description">Обязательно обсуждаю проект для получения лучшего результата</span></div>
-        <div class="my-quality__block my-quality__block--zeppelin"><span class="my-quality__block-title">Современные технологии</span><span class="my-quality__block-description">Использую сборку grunt для быстрого написания кореектного кода</span></div>
-        <div class="my-quality__block my-quality__block--time"><span class="my-quality__block-title">Пунктуальность</span><span class="my-quality__block-description">Все проекты выполняю в срок</span></div>
+    <section class="about-me"><a name="about"></a><img class="about-me__img" src="img/me.jpg" alt="мое фото">
+      <div class="about-me__info">
+        <h1 class="about-me__title">Обо мне</h1>
+        <div class="about-me__description">
+          <div class="about-me__punct">
+            <p class="about-me__punct-part">Александр Абрамов , 26 лет.</p>
+            <p class="about-me__punct-part about-me__punct-part--ok">В 2012-м году закончил СПбГУТ  "им. проф. Бонч-Бруевича" Факультет Информационных Систем и Технологий.</p>
+            <p class="about-me__punct-part about-me__punct-part--ok">
+              В июне 2016 года получил сертификат об окончании очного курса HTML 5 + CSS 3 в
+              школе интернет-технологий "Epic Skills".
+            </p>
+            <p class="about-me__punct-part about-me__punct-part--ok">Занимался версткой частных сайтов c 2011-го года, совмещая с основной работой инженера.</p>
+            <p class="about-me__punct-part about-me__punct-part--ok">Cтраюсь постоянно изучать что-то новое и совершенстровать свои навыки.</p>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
+    <!-- include blocks/my-quality/my-quality-->
     <div class="my-tools__inner">
       <div class="my-tools">
-        <div class="my-tools__title">Мои инструменты</div>
+        <h1 class="my-tools__title">Мои инструменты</h1>
         <div class="my-tools__tool"> HTML5, CSS3, JS, PHP</div>
         <div class="my-tools__tool my-tools__tool--cms">MODX, Laravel</div>
         <div class="my-tools__tool my-tools__tool--sience">JADE, LESS, Bootstrap, GRUNT, GULP</div>
         <div class="my-tools__tool my-tools__tool--notepad">WebStorm, Notepad++, XAMPP, Photoshop</div>
       </div>
     </div>
-    <div class="my-gallery">
-      <div class="my-gallery__title">Мои проекты</div>
+    <section class="my-gallery"><a name="project"></a>
+      <h1 class="my-gallery__title">Мои проекты</h1>
       <div class="my-gallery__projects">
-        <div style="background-image: url('img/mbt.jpg');" class="my-gallery__project"><a href="#" class="my-gallery__project-preview">+</a><a href="#" class="my-gallery__project-preview my-gallery__project-preview--about"></a></div>
-        <div style="background-image: url('img/sale.jpg');" class="my-gallery__project"><a href="#" class="my-gallery__project-preview">+</a><a href="#" class="my-gallery__project-preview my-gallery__project-preview--about"></a></div>
-        <div style="background-image: url('img/kiber.jpg');" class="my-gallery__project"><a href="#" class="my-gallery__project-preview">+</a><a href="#" class="my-gallery__project-preview my-gallery__project-preview--about"></a></div>
-        <div style="background-image: url('img/mbt.jpg');" class="my-gallery__project"><a href="#" class="my-gallery__project-preview">+</a><a href="#" class="my-gallery__project-preview my-gallery__project-preview--about"></a></div>
-        <div style="background-image: url('img/sale.jpg');" class="my-gallery__project"><a href="#" class="my-gallery__project-preview">+</a><a href="#" class="my-gallery__project-preview my-gallery__project-preview--about"></a></div>
-        <div style="background-image: url('img/kiber.jpg');" class="my-gallery__project"><a href="#" class="my-gallery__project-preview">+</a><a href="#" class="my-gallery__project-preview my-gallery__project-preview--about"></a></div>
+            <div class="my-gallery__project" style="background-image: url('img/green_ico.jpg')"><a class="my-gallery__project-preview" id="galleryPrev" href="img/green.jpg">+</a><a class="my-gallery__project-preview my-gallery__project-preview--about" href="p_green/maket.html"></a></div>
+            <div class="my-gallery__project" style="background-image: url('img/moroz_ico.jpg')"><a class="my-gallery__project-preview" id="galleryPrev" href="img/moroz.jpg">+</a><a class="my-gallery__project-preview my-gallery__project-preview--about" href="p_moroz/maket.html"></a></div>
+            <div class="my-gallery__project" style="background-image: url('img/sale_ico.jpg')"><a class="my-gallery__project-preview" id="galleryPrev" href="img/sale.jpg">+</a><a class="my-gallery__project-preview my-gallery__project-preview--about" href="p_sale/maket.html"></a></div>
+            <div class="my-gallery__project" style="background-image: url('img/kiber_ico.jpg')"><a class="my-gallery__project-preview" id="galleryPrev" href="img/kiber.jpg">+</a><a class="my-gallery__project-preview my-gallery__project-preview--about" href="p_kiber/maket.html"></a></div>
       </div>
-    </div>
-    <div class="my-contacts__inner">
-      <section class="my-contacts"><span class="my-contacts__title">Контакты</span>
+    </section>
+    <div class="my-contacts__inner"><a name="contact"></a>
+      <section class="my-contacts">
+        <h1 class="my-contacts__title">Контакты</h1>
         <div class="my-contacts__contact-post">
           <div class="my-contacts__contact">
-            <div class="my-contacts__type my-contacts__type--line"><span class="my-contacts__type-name">ТЕЛЕФОН:</span><a href="tel:+79043390832" class="my-contacts__type-info"> +7(904) 33 908 32</a></div>
-            <div class="my-contacts__type"><span class="my-contacts__type-name">E-MAIL:<a href="mailto:aleksnc@mail.ru" class="my-contacts__type-info"> aleksnc@mail.ru</a></span></div>
+            <div class="my-contacts__type my-contacts__type--line"><span class="my-contacts__type-name">ТЕЛЕФОН:</span><a class="my-contacts__type-info" href="tel:+79043390832"> +7(904) 33 908 32</a></div>
+            <div class="my-contacts__type"><span class="my-contacts__type-name">E-MAIL:<a class="my-contacts__type-info" href="mailto:aleksnc@mail.ru"> aleksnc@mail.ru</a></span></div>
           </div>
           <div class="my-contacts__post">
             <form class="form"><span class="form__title">Пишите!</span><span class="form__name">Почта</span>
-              <input id="mail" type="text" onkeyup="valid_focus(event)" placeholder="ввведите@адрес.почты" class="form__input"><span class="form__name">Тема сообщения</span>
-              <input id="theme" type="text" onkeyup="valid_focus(event)" placeholder="Тема сообщения" class="form__input"><span class="form__name">Текс сообщения</span>
-              <textarea id="message" onkeyup="valid_focus(event)" placeholder="Ваше сообщение" class="form__input"></textarea><a id="send" type="text" href=" " class="form__send">Отправить</a>
+              <input class="form__input" id="mail" type="text" onkeyup="valid_focus(event)" placeholder="ввведите@адрес.почты"><span class="form__name">Тема сообщения</span>
+              <input class="form__input" id="theme" type="text" onkeyup="valid_focus(event)" placeholder="Тема сообщения"><span class="form__name">Текс сообщения</span>
+              <textarea class="form__input" id="message" onkeyup="valid_focus(event)" placeholder="Ваше сообщение"></textarea><a class="form__send" id="send" type="text" href="javascript:void(0);">Отправить</a>
             </form>
           </div>
         </div>
       </section>
     </div>
+    <div class="page-footer"><span class="page-footer__part"> NC art 2016<a class="page-footer__adress" href="aleksnc.ru"> Мое резюме</a></span><span class="page-footer__part">Абрамов Александр</span><span class="page-footer__part">тел:<a class="page-footer__tel" href="tel:+79043390832">+7 (904) 339-08-32</a></span></div>
     <script src="js/jquery-2.2.3.min.js"></script>
     <script src="js/fancy/jquery.fancybox.pack.js"></script>
     <script src="js/slick.min.js"></script>

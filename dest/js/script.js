@@ -1,5 +1,32 @@
 $(document).ready(function() {
 	$('#message').autoResize();
+
+	$("#galleryPrev").fancybox({
+		padding: 0,
+	});
+
+	var winWidth=$( window ).width();
+	if(winWidth>=768){
+		var test=$('.my-gallery__project');
+		var i=0;
+		var arraySize= ['18%','28%','32%','22%','22%','32%','28%','18%'];
+		for (a=0; a<test.length; a++){
+			if (i>7){
+				i=0;
+			}
+			var objr=test[a];
+			$(objr).css("width",arraySize[i]);
+			i++;
+		}
+	}
+});
+
+$('.main-nav__punct').click(function (e) {
+	var attr=$(this).attr('href');
+	var name=attr.substr(1);
+	destination = $('a[name="'+name+'"]').offset().top+'px';
+	$('body').animate( { scrollTop: destination }, 2500 );
+	return false;
 });
 
 
@@ -9,13 +36,11 @@ function valid_focus(e){
 	var myid='#'+idelem;
 	var mail_text=$(myid).val();
 
-	console.log(mail_text);
-
 	if(idelem=='mail'){
 		var test_valid= /^([A-Za-z0-9_-]+\.)*[A-Za-z0-9_-]+@[A-Za-z0-9_-]+(\.[A-Za-z0-9_-]+)*\.[A-Za-z]{2,6}$/;
 	}else{
 
-		var test_valid= /^([A-Za-z0-9\s]+[\.]?)+$/i;
+		var test_valid= /^([А-Яа-яЁ-ёA-Za-z0-9\s]+[\.]?)+$/i;
 	}
 
 	if(test_valid.test(mail_text)){
@@ -27,7 +52,6 @@ function valid_focus(e){
 			if($('#theme').attr('name')=='ok'){
 				if($('#message').attr('name')=='ok') {
 					$('#send').attr('onclick', 'send(event)');
-					$('#send').attr('href', 'javascript:void(0);');
 					$('#send').toggleClass('form__send--active', true);
 				}
 			}
@@ -37,7 +61,6 @@ function valid_focus(e){
 		$(myid).css('border-color','#ff2600');
 		$(myid).attr('name','no');
 		$('#send').attr('onclick',' ');
-		$('#send').attr('href', ' ');
 		$('#send').toggleClass('form__send--active', false);
 	}
 }

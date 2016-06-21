@@ -1,0 +1,5 @@
+mixin mygallery(...paths)
+    each path in paths
+        .my-gallery__project(style="background-image: url('img/"+path+"_ico.jpg');")
+            a#galleryPrev.my-gallery__project-preview(href='img/'+path+'.jpg') +
+            a.my-gallery__project-preview.my-gallery__project-preview--about(href='p_'+path+'/maket.html')
