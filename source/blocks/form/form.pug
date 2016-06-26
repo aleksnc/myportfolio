@@ -1,9 +1,9 @@
 form.form
     span.form__title Пишите!
-    span.form__name Почта
+    label#mailName.form__name( for="mail" data-name="Почта") Почта
     input.form__input#mail(type="text" onkeyup="valid_focus(event)" placeholder="ввведите@адрес.почты")
-    span.form__name Тема сообщения
+    label#themeName.form__name(for="theme" data-name="Тема сообщения") Тема сообщения
     input.form__input#theme(type="text" onkeyup="valid_focus(event)" placeholder="Тема сообщения")
-    span.form__name Текс сообщения
-    textarea#message.form__input(onkeyup="valid_focus(event)" placeholder="Ваше сообщение")
+    label#messageName.form__name(for="message" data-name="Текс сообщения") Текс сообщения
+    textarea#message.form__input.form__input--textarea(onkeyup="valid_focus(event)" placeholder="Ваше сообщение")
     a.form__send#send(type="text" href="javascript:void(0);") Отправить

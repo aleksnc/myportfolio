@@ -3,19 +3,21 @@
   align-content:                  center;
   align-items:                    center;
   justify-content:                center;
-  height:                         59px;
+  min-height:                     59px;
   margin:                         0;
 
   @media (min-width: 768px) {
     justify-content:              flex-end;
   }
   &__list{
-    align-self: center;
+    align-items:                  center;
     color:                        #fff;
     font-size:                    @text-size-sm;
     text-transform:               uppercase;
     font-weight:                  500;
     display:                      flex;
+
+    flex-wrap: wrap;
   }
 
   &__link{
@@ -24,6 +26,17 @@
 
     &:hover{
       color:                      @color-second;
+    }
+
+    &--accessibility{
+      font-weight:                600;
+      font-size:                  @text-size-l;
+      padding:                    5px;
+
+      &:hover{
+        color:                    @color-second-active;
+        background:               #fff;
+      }
     }
   }
 }

@@ -30,17 +30,25 @@
     &:before{
       content:                         "";
       position:                        absolute;
-      background-color:                rgba(45, 106, 161, 0);
+      background-color:                rgba(45, 106, 161, 1);
       width:                           100%;
+      opacity:                         0;
       height:                          100%;
       left:                            0;
       top:                             0;
     }
 
+
+    &--none-anim{
+      &:before {
+        opacity: 0.5;
+      }
+    }
+
     &:hover{
       &:before {
         content:                       "";
-        background-color:              rgba(45, 106, 161, 0.5);
+        opacity:                       0.5;
         transition:                    0.5s;
       }
     }
@@ -84,6 +92,13 @@
         margin-right:                    8px;
         transform:                       rotate(45deg);
       }
+    }
+
+    &--none-anim{
+      opacity:                           1;
+      transform:                         translate(0);
+      transition:                        0.5s;
+      color:                             #fff;
     }
   }
 }

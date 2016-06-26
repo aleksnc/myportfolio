@@ -1,0 +1,73 @@
+@import "../blocks/slick-carusel/slick.less";
+@import "../blocks/slick-carusel/slick-theme.less";
+@import "../blocks/jquery.fancybox.less";
+
+@import '../blocks/variables/variables.less';
+@import '../blocks/global/global.less';
+
+@import '../blocks/about-me/about-me.less';
+@import '../blocks/accessibility/accessibility.less';
+@import '../blocks/form/form.less';
+@import '../blocks/main-nav/main-nav.less';
+@import '../blocks/my-contacts/my-contacts.less';
+@import '../blocks/my-gallery/my-gallery.less';
+@import '../blocks/my-quality/my-quality.less';
+@import '../blocks/my-tools/my-tools.less';
+@import '../blocks/nav-display/nav-display.less';
+@import '../blocks/page-footer/page-footer.less';
+@import '../blocks/page-header/page-header.less';
+
+@import "../blocks/block-maket/block-maket.less";
+@import "../blocks/header-maket/header-maket.less";
+@import "../blocks/maket-gallery/maket-gallery.less";
+@import "../blocks/maket-nav/maket-nav.less";
+
+
+html, body, .title{
+  font-weight:                         600;
+}
+
+
+.page-header{
+  &__inner{
+
+    &:before{
+      background-color:                rgba(35,16,16,1);
+    }
+  }
+}
+
+.main-nav{
+  &__link{
+    font-weight:                       600;
+    font-size:                         @text-size-l;
+    padding:                           5px;
+
+    &:hover{
+      color:                           #231010;
+      background:                      #fff;
+    }
+  }
+}
+
+.my-tools__inner:before, .my-contacts__inner:before{
+  background-color:                    rgba(0, 0, 62, 0.94);
+}
+
+.my-gallery__project:before{
+  background-color:                    rgba(200, 200, 255, 0.9);
+}
+
+.my-gallery__project-preview{
+  background-color:                    #1b3c59;
+}
+
+.form__send--active{
+  background-color:                    #000;
+  border:                              1px solid #fff;
+
+  &:hover{
+    background-color:                 @gray-light;
+    color:                            @gray-dark;
+  }
+}

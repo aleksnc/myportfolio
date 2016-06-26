@@ -1,0 +1,55 @@
+.accessibility__inner
+    .accessibility
+        h1.accessibility__title Настройки доступности
+        .accessibility__block
+            h2.accessibility__block-title Шрифт
+            ul.accessibility__block-list
+                li
+                    input.accessibility__block-resize(value="1" checked="checked" type="radio" name="contrast")
+                    | x 1.0
+                li
+                    input.accessibility__block-resize(value="1.2" type="radio" name="contrast")
+                    | x 1.2
+                li
+                    input.accessibility__block-resize(value="1.4" type="radio" name="contrast")
+                    | x 1.4
+                li
+                    input.accessibility__block-resize(value="1.6" type="radio" name="contrast")
+                    | x 1.6
+                li
+                    input.accessibility__block-resize(value="1.8" type="radio" name="contrast")
+                    | x 1.8
+                li
+                    input.accessibility__block-resize(value="2" type="radio" name="contrast")
+                    | x 2.0
+
+
+        .accessibility__block
+            h2.accessibility__block-title Контрастность
+            ul.accessibility__block-list
+                li
+                    input.accessibility__block-css(value="style.css" checked="checked" type="radio" name="contrast")
+                    |Контрастность по умолчанию
+                li
+                    input.accessibility__block-css(value="style-contrast.css" type="radio" name="contrast")
+                    |Повышенная контрастность
+
+        .accessibility__block
+            h2.accessibility__block-title Анимация
+            ul.accessibility__block-list
+                li
+                    input.accessibility__block-anim( value="on" checked="checked" type="radio" name="anim")
+                    | Включить анимацию
+                li
+                    input.accessibility__block-anim( value="off" type="radio" name="anim")
+                    | Выключить анимацию
+
+        .accessibility__block
+            h2.accessibility__block-title Изображения
+            ul.accessibility__block-list
+                li
+                    input.accessibility__block-img(value="on" checked="checked" type="radio" name="img")
+                    | Включить Изображения
+                li
+                    input.accessibility__block-img(value="off" type="radio" name="img")
+                    | Выключить Изображения

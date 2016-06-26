@@ -1,0 +1,43 @@
+.accessibility{
+  max-width:                           1200px;
+  margin:                              0 auto;
+  display:                             flex;
+  flex-wrap:                           wrap;
+  justify-content:                     space-around;
+  padding:                             20px;
+
+  &__title{
+    &:extend(.title);
+    text-align:                         center;
+    color:                              #fff;
+    width:                              100%;
+    margin:                             20px 0;
+  }
+
+  &__block-list{
+    font-size:                         @text-size;
+    color:                             #fff;
+    text-align:                        left;
+
+    & li{
+      padding:                        5px 0;
+    }
+  }
+  &__block-title{
+    &:extend(.title-2);
+    text-align:                         center;
+    color:                              #fff;
+    width:                              100%;
+    margin:                             20px 0;
+  }
+
+  &__inner{
+    width:                             100%;
+    background:                        #000;
+    display:                           none;
+
+    &--show{
+      display:                         block;
+    }
+  }
+}

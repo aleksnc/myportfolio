@@ -1,8 +1,10 @@
-@text-size-xxl:                       36px;
-@text-size-xl:                        30px;
-@text-size-l:                         18px;
-@text-size:                           16px;
-@text-size-sm:                        14px;
+@text-size-xxl:                       2.250em;
+@text-size-xl:                        1.500em;
+@text-size-l:                         1.125em;
+@text-size:                           1em;
+@text-size-sm:                        0.875em;
+
+@text-global:                         16px;
 
 @color-primary:                       rgb(45,106,161);
 @color-primary-active:                rgb(27,67,114);
@@ -18,8 +20,8 @@
 @gray-light:                          rgb(224, 224, 224);
 @gray-wight:                          #fafafa;
 
-@font-family:                        'Open Sans', sans-serif;
-@font-family-h:                      'Open Sans', sans-serif;
+@font-family:                        'Open Sans', Arial, sans-serif;
+@font-family-h:                      'Open Sans', Arial, sans-serif;
 
 @screen-sm:                           768px;
 @screen-md:                           1200px;
@@ -74,16 +76,23 @@
 
 
 .title{
-  font-family:                        @font-family-h;
+   font-family:                        @font-family;
+   font-weight:                        500;
+   font-size:                          @text-size-xl;
+   margin:                             0;
+   display:                            block;
+   margin:                             0;
+   padding:                            0;
+   text-align:                         center;
+ }
+
+.title-2{
+  font-family:                        @font-family;
   font-weight:                        500;
-  font-size:                          (@text-size-xl)-4;
+  font-size:                          (@text-size-l)+0.25;
   margin:                             0;
   display:                            block;
   margin:                             0;
   padding:                            0;
   text-align:                         center;
-
-  @media (min-width: 468px) {
-    font-size:                        @text-size-xl;
-  }
 }

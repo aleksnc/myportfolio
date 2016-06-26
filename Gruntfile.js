@@ -43,7 +43,9 @@ module.exports = function(grunt){
           paths: ['source/']
         },
         files: {
-          'dest/css/style.css': 'source/css/style.less'
+          'dest/css/style.css': 'source/css/style.less',
+          'dest/css/style-gray.css': 'source/css/style-gray.less',
+          'dest/css/style-contrast.css': 'source/css/style-contrast.less'
         }
       }
     },

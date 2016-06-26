@@ -1,0 +1,35 @@
+.header-maket{
+  display:                             flex;
+  position:                            relative;
+  justify-content:                     space-between;
+  width:                               100%;
+  max-width:                           1200px;
+  margin:                              0 auto;
+  color:                               #fff;
+  text-align:                          center;
+  font-family:                         "Open Sans Light", "Helvetica Neue", Helvetica, Arial,sans-serif;
+  padding:                             20px;
+
+  &__inner{
+    display:                           block;
+    position:                          relative;
+    background-image:                  url("@{img-path}16.jpg");
+    background-size:                   cover;
+    width:                             100%;
+
+    @media (min-width: 1200px ) {
+      background-position: 50% -310px;
+      background-attachment:             fixed;
+    }
+
+    &:before{
+      content:                         "";
+      display:                         block;
+      background-color:                rgba(35,16,16,0.65);
+      height:                          100%;
+      width:                           100%;
+      position:                        absolute;
+    }
+  }
+
+}

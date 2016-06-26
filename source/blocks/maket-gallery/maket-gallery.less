@@ -1,0 +1,23 @@
+.maket-gallery{
+  position:                            relative;
+  max-width:                           750px;
+  width:                               100%;
+  overflow:                            hidden;
+
+  & .slick-slide{
+    height:                            auto;
+  }
+
+  &__img{
+    padding:                           10px 5px;
+  }
+
+  &__nav{
+    height:                            115px;
+    display:                           none;
+
+    @media (min-width: 1200px){
+      display:                         block;
+    }
+  }
+}

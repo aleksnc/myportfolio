@@ -6,7 +6,7 @@
     <title>Мое портфолио</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body data-fontsize="16">
     <div class="page-header__inner">
       <div class="page-header">
         <nav class="main-nav">
@@ -14,13 +14,75 @@
             <li class="main-nav__link"><a class="main-nav__punct" href="#about">Обо мне</a></li>
             <li class="main-nav__link"><a class="main-nav__punct" href="#project">Мои проекты</a></li>
             <li class="main-nav__link"><a class="main-nav__punct" href="#contact">Контакты</a></li>
+            <li class="main-nav__link main-nav__link--accessibility"><a class="main-nav__punct" onclick="accessibility()" href="#">доступность</a></li>
           </ul>
         </nav>
         <h1 class="page-header__title">HTML-ВЕРСТКА</h1>
         <h2 class="page-header__description">Привет! Меня зовут Александр Абрамов, а это мое портфолио.</h2>
       </div>
     </div>
-    <section class="about-me"><a name="about"></a><img class="about-me__img" src="img/me.jpg" alt="мое фото">
+    <div class="accessibility__inner">
+      <div class="accessibility">
+        <h1 class="accessibility__title">Настройки доступности</h1>
+        <div class="accessibility__block">
+          <h2 class="accessibility__block-title">Шрифт</h2>
+          <ul class="accessibility__block-list">
+            <li>
+              <input class="accessibility__block-resize" value="1" checked="checked" type="radio" name="contrast">x 1.0
+            </li>
+            <li>
+              <input class="accessibility__block-resize" value="1.2" type="radio" name="contrast">x 1.2
+            </li>
+            <li>
+              <input class="accessibility__block-resize" value="1.4" type="radio" name="contrast">x 1.4
+            </li>
+            <li>
+              <input class="accessibility__block-resize" value="1.6" type="radio" name="contrast">x 1.6
+            </li>
+            <li>
+              <input class="accessibility__block-resize" value="1.8" type="radio" name="contrast">x 1.8
+            </li>
+            <li>
+              <input class="accessibility__block-resize" value="2" type="radio" name="contrast">x 2.0
+            </li>
+          </ul>
+        </div>
+        <div class="accessibility__block">
+          <h2 class="accessibility__block-title">Контрастность</h2>
+          <ul class="accessibility__block-list">
+            <li>
+              <input class="accessibility__block-css" value="style.css" checked="checked" type="radio" name="contrast">Контрастность по умолчанию
+            </li>
+            <li>
+              <input class="accessibility__block-css" value="style-contrast.css" type="radio" name="contrast">Повышенная контрастность
+            </li>
+          </ul>
+        </div>
+        <div class="accessibility__block">
+          <h2 class="accessibility__block-title">Анимация</h2>
+          <ul class="accessibility__block-list">
+            <li>
+              <input class="accessibility__block-anim" value="on" checked="checked" type="radio" name="anim">Включить анимацию
+            </li>
+            <li>
+              <input class="accessibility__block-anim" value="off" type="radio" name="anim">Выключить анимацию
+            </li>
+          </ul>
+        </div>
+        <div class="accessibility__block">
+          <h2 class="accessibility__block-title">Изображения</h2>
+          <ul class="accessibility__block-list">
+            <li>
+              <input class="accessibility__block-img" value="on" checked="checked" type="radio" name="img">Включить Изображения
+            </li>
+            <li>
+              <input class="accessibility__block-img" value="off" type="radio" name="img">Выключить Изображения
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><a name="about"></a>
+    <section class="about-me"><img class="about-me__img" src="img/me.jpg" alt="мое фото">
       <div class="about-me__info">
         <h1 class="about-me__title">Обо мне</h1>
         <div class="about-me__description">
@@ -37,11 +99,10 @@
         </div>
       </div>
     </section>
-    <!-- include blocks/my-quality/my-quality-->
     <div class="my-tools__inner">
       <div class="my-tools">
         <h1 class="my-tools__title">Мои инструменты</h1>
-        <div class="my-tools__tool"> HTML5, CSS3, JS, PHP</div>
+        <div class="my-tools__tool"><abbr lang="en" title="HyperText Markup Language 5"> HTML5</abbr>,<abbr lang="en" title="Cascading Style Sheets 3"> CSS3</abbr>,<abbr lang="en" title="Java Script"> JS</abbr>,<abbr lang="en" title="Hypertext Preprocessor"> PHP</abbr></div>
         <div class="my-tools__tool my-tools__tool--cms">MODX, Laravel</div>
         <div class="my-tools__tool my-tools__tool--sience">JADE, LESS, Bootstrap, GRUNT, GULP</div>
         <div class="my-tools__tool my-tools__tool--notepad">WebStorm, Notepad++, XAMPP, Photoshop</div>
@@ -62,13 +123,16 @@
         <div class="my-contacts__contact-post">
           <div class="my-contacts__contact">
             <div class="my-contacts__type my-contacts__type--line"><span class="my-contacts__type-name">ТЕЛЕФОН:</span><a class="my-contacts__type-info" href="tel:+79043390832"> +7(904) 33 908 32</a></div>
-            <div class="my-contacts__type"><span class="my-contacts__type-name">E-MAIL:<a class="my-contacts__type-info" href="mailto:aleksnc@mail.ru"> aleksnc@mail.ru</a></span></div>
+            <div class="my-contacts__type"><span class="my-contacts__type-name">E-MAIL:<a class="my-contacts__type-info" href="mailto:aleksnc@mail.ru"> aleksnc@<wbr>mail.ru</a></span></div>
           </div>
           <div class="my-contacts__post">
-            <form class="form"><span class="form__title">Пишите!</span><span class="form__name">Почта</span>
-              <input class="form__input" id="mail" type="text" onkeyup="valid_focus(event)" placeholder="ввведите@адрес.почты"><span class="form__name">Тема сообщения</span>
-              <input class="form__input" id="theme" type="text" onkeyup="valid_focus(event)" placeholder="Тема сообщения"><span class="form__name">Текс сообщения</span>
-              <textarea class="form__input" id="message" onkeyup="valid_focus(event)" placeholder="Ваше сообщение"></textarea><a class="form__send" id="send" type="text" href="javascript:void(0);">Отправить</a>
+            <form class="form"><span class="form__title">Пишите!</span>
+              <label class="form__name" id="mailName" for="mail" data-name="Почта">Почта</label>
+              <input class="form__input" id="mail" type="text" onkeyup="valid_focus(event)" placeholder="ввведите@адрес.почты">
+              <label class="form__name" id="themeName" for="theme" data-name="Тема сообщения">Тема сообщения</label>
+              <input class="form__input" id="theme" type="text" onkeyup="valid_focus(event)" placeholder="Тема сообщения">
+              <label class="form__name" id="messageName" for="message" data-name="Текс сообщения">Текс сообщения</label>
+              <textarea class="form__input form__input--textarea" id="message" onkeyup="valid_focus(event)" placeholder="Ваше сообщение"></textarea><a class="form__send" id="send" type="text" href="javascript:void(0);">Отправить</a>
             </form>
           </div>
         </div>

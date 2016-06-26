@@ -5,9 +5,10 @@ html(lang="ru")
         meta( name="viewport" content="width=device-width, initial-scale=1.0")
         title Мое портфолио
         link(rel="stylesheet" href="css/style.css")
-    body
+    body(data-fontsize="16")
         include mixins.pug
         include page-header/page-header
+        include accessibility/accessibility
         block content
         include page-footer/page-footer
 
